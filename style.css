@@ -11,6 +11,11 @@ body {
     font-weight: 100;
     letter-spacing: 12px;    
 }
+#description a {
+    background: transparent;
+    color: rgb(43, 149, 248);
+    text-decoration: none;
+}
 header {
     padding: 4px;
     margin: 0 0 10px 0;
@@ -20,6 +25,11 @@ header {
     margin: 0;
     padding: 15px;
     font-size: 3em;
+}
+header a {
+    background: transparent;
+    color: white;
+    text-decoration: none;
 }
 #main-title a {
     background: transparent;
