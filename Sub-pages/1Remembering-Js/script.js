@@ -51,11 +51,11 @@ function calc() {
         if (mthd === '+') {
             document.getElementById('calc-r').innerHTML = n1 + n2
         } else if (mthd === '-') {
-            document.getElementById('calc-r').innerHTML = n1 - n2
+            document.getElementById('calc-r').innerHTML = n1 - n2  //bug
         } else if (mthd === '*') {
             document.getElementById('calc-r').innerHTML = n1 * n2
         } else if (mthd === '/') {
-            document.getElementById('calc-r').innerHTML = n1 / n2
+            document.getElementById('calc-r').innerHTML = n1 / n2  //bug
         }
     }
     document.getElementById('n1').value = ''
