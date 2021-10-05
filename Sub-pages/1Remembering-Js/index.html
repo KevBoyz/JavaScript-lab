@@ -9,6 +9,7 @@
     <title>Remembering JavaScript</title>
 </head>
 <body>
+
     <header>
         <p id="description">
             Some random JavaScript projects developed by <a href="https://github.com/KevBoyz">KevBoyz</a>.
@@ -32,13 +33,28 @@
                 <input type="password" name="password" id="password" placeholder="Password">
                 <input type="button" value="Generate the Object" id="lg-button">
             </form>
-            <h2 class='title'>Output data</h2>
             <div id="lg-output">
                 <p>User name: <span id='name-op'></span></p>
                 <p>Email adrs: <span id='email-op'></span></p>
                 <p>Password: <span id='password-op'></span></p>
             </div>
-            <h2 class='title'>Js Calculator</h2>
+            <form action="" id='calc-pg'>
+                <h2 class='title'>Math Calculator</h2>
+                <div id=calc-area>
+                    <input type="number" name="number" id="n1" placeholder="Number 1">
+                    <input type="text" name="type-c" id="type-c" placeholder="Methd" list='list'>
+                    <datalist id="list">
+                        <option value="+"></option>
+                        <option value="-"></option>
+                        <option value="*"></option>
+                        <option value="/"></option>
+                      </datalist>
+                    <input type="number" name="number" id="n2" placeholder="Number 2">
+                </div>
+                <input type="button" value="Calcule the result" id='rbutton'>
+                <p id='calc-output'>Result: <span id='calc-r'></span></p>
+                
+            </form>
         </div>
         <div class="content">
             
