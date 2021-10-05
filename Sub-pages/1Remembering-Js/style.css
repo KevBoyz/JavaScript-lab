@@ -98,7 +98,8 @@ main {
 }
 #lg-output {
     width: 80%;
-    margin: 0 10% 0 10%;
+    margin: 0 10% 40px 10%;
+    border-bottom: 1px black solid;
 }
 #lg-output span {
     color: rgb(0, 173, 0);

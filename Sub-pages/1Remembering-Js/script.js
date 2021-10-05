@@ -6,7 +6,6 @@ class Person {
         this.password = password
     }
     login() {
-        window.alert('Log-in complete.')
         document.getElementById('name-op').innerHTML = this.name
         document.getElementById('email-op').innerHTML = this.email
         document.getElementById('password-op').innerHTML = this.password
@@ -21,6 +20,9 @@ function validate(name, email, password) {
     }
     else {
         person = new Person(name, email, password)
+        document.getElementById('name').value = ''
+        document.getElementById('email').value = ''
+        document.getElementById('password').value = ''
         person.login()
     }
     
