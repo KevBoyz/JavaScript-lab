@@ -67,7 +67,10 @@ main {
     height: 100%;
     width: 40%;
 }
-#login-pg .title {
+#login-pg {
+    margin-bottom: 20px;
+}
+.title {
     text-align: center;
     font-size: 2em;
 }
@@ -79,7 +82,7 @@ main {
     border-radius: 15px;
     border: 1px solid black;
 }
-#login-pg #submit-btn {
+#login-pg #lg-button {
     width: 60%;
     border: 3px solid rgb(15, 15, 15);
     padding: 5px;
@@ -88,8 +91,15 @@ main {
     background-color: #19fa776c;
     color: #fff;
     font-weight: 600;
-    letter-spacing: 10px;
+    letter-spacing: 8px;
     text-shadow: 1px 1px 2px #000000;
     font-size: 1em;
     cursor:pointer;
+}
+#lg-output {
+    width: 80%;
+    margin: 0 10% 0 10%;
+}
+#lg-output span {
+    color: rgb(0, 173, 0);
 }

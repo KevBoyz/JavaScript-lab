@@ -28,10 +28,16 @@
             <form action="" id='login-pg'>
                 <h2 class='title'>Login Page</h2>
                 <input type="text" name="name" id="name" placeholder="Username">
-                <input type="email" name="email" id="name" placeholder="Email adress">
+                <input type="email" name="email" id="email" placeholder="Email adress">
                 <input type="password" name="password" id="password" placeholder="Password">
-                <button id='submit-btn'>Generate Object</button>
+                <input type="button" value="Generate the Object" id="lg-button">
             </form>
+            <h2 class='title'>Output data</h2>
+            <div id="lg-output">
+                <p>User name: <span id='name-op'></span></p>
+                <p>Email adrs: <span id='email-op'></span></p>
+                <p>Password: <span id='password-op'></span></p>
+            </div>
         </div>
         <div class="content">
             
