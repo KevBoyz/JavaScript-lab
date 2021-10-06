@@ -38,10 +38,11 @@ function get() {
 const lgButton = document.querySelector('#lg-button')
 const lgOutput = document.querySelector('#lg-output')
 lgButton.addEventListener('click', get)
+
 // Calculator section 
 function calc() {
-    let n1 = parseInt(document.getElementById('n1').value) 
-    let n2 = parseInt(document.getElementById('n1').value)
+    let n1 = Number(document.getElementById('n1').value) 
+    let n2 = Number(document.getElementById('n2').value)
     let mthd = document.getElementById('type-c').value
     if (n1.length === 0 | n2.length === 0 | mthd.length === 0) {
         window.alert('Error, fill the calculator inputs.')
@@ -62,7 +63,22 @@ function calc() {
     document.getElementById('n2').value = ''
     document.getElementById('type-c').value = ''
 }
-
-
 const ClButton = document.querySelector('#rbutton')
 ClButton.addEventListener('click', calc)
+
+// Looping section
+function loop() {
+    document.getElementById('loop-output').innerHTML = ''
+    let ls = Number(document.getElementById('ls').value)
+    let le = Number(document.getElementById('le').value)
+    let lj = Number(document.getElementById('lj').value)
+    for (c = ls;c <= le;c += lj) {
+        document.getElementById('loop-output').innerHTML += `${c} \u{1f449}`
+    }
+    document.getElementById('loop-output').innerHTML += '\u{1F3C1}'
+    document.getElementById('ls').value = ''
+    document.getElementById('le').value = ''
+    document.getElementById('lj').value = ''
+}
+let lbutton = document.getElementById('lp-button')
+lbutton.addEventListener('click', loop)

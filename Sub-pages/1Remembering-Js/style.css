@@ -64,7 +64,7 @@ main {
 }
 .content {
     background: #0000002f;
-    height: 100%;
+    height: 90%;
     width: 40%;
 }
 #login-pg {
@@ -133,4 +133,11 @@ main {
 }
 #calc-output span {
     color: #00ad00;
+}
+#loop-pg, #loop-output {
+    width: 80%;
+    margin: 10px 10% 2px 10%;
+}
+#ls, #le, #lj, #lp-button{
+    width: 20%;
 }
