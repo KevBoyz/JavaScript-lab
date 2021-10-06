@@ -65,8 +65,8 @@ main {
 .content {
     background: #0000002f;
     height: 75%;
-    min-width: 40%;
-    max-width: 50%;
+    min-width: 530px;
+    max-width: 550;
     margin-bottom: 10px;
 }
 #login-pg {
@@ -152,4 +152,15 @@ main {
 }
 #loop-pg div {
     margin-left: 10%;
+}
+#array-pg div{
+    width: 50%;
+    margin: 0 25% 10px 25%;
+}
+#array-pg #array-box{
+    max-width: 47%;
+    margin: 0 25% 10px 25%;
+}
+#array-pg #dbutton {
+    width: 25%;
 }

@@ -82,3 +82,23 @@ function loop() {
 }
 let lbutton = document.getElementById('lp-button')
 lbutton.addEventListener('click', loop)
+
+//Array section
+function validate(){
+    if (array.indexOf(document.getElementById('data').value) === -1) {
+        pushArray()
+    } else {
+        window.alert('Error, the value already exists')
+    }
+}
+function pushArray() {
+    array.push(document.getElementById('data').value)
+    opt = document.createElement('option')
+    opt.text = `${array[array.length - 1]} has inserted`
+    box.appendChild(opt)
+    document.getElementById('data').value = ''
+}
+let array = []
+let dbutton = document.getElementById('dbutton')
+box = document.getElementById('array-box')
+dbutton.addEventListener('click', validate)
