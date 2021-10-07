@@ -11,7 +11,7 @@ class Person {
         document.getElementById('password-op').innerHTML = this.password
     }
 }
-function validate(name, email, password) {
+function valid(name, email, password) {
     if (password.length < 6) {
         window.alert('Error, the password must be at least 6 characters long.')
     }
@@ -32,7 +32,7 @@ function get() {
     let email = document.getElementById('email').value
     let password =  document.getElementById('password').value
     const person = new Person(name, email, password)
-    validate(name, email, password)
+    valid(name, email, password)
 }
 
 const lgButton = document.querySelector('#lg-button')
@@ -99,6 +99,6 @@ function pushArray() {
     document.getElementById('data').value = ''
 }
 let array = []
-let dbutton = document.getElementById('dbutton')
+let dbutton = document.querySelector('#dbutton')
 box = document.getElementById('array-box')
 dbutton.addEventListener('click', validate)
