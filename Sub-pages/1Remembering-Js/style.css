@@ -1,3 +1,23 @@
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #292927; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(95, 93, 93); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #242423;
@@ -202,7 +222,7 @@ main {
     margin: 0 5px 0 5px
 }
 #img-output {
-    background-color: rgba(25, 250, 119, 0.596);
+    background-color: #19fa7798;
     height: 10px;
     border-radius: 20px;
 }
@@ -210,4 +230,29 @@ main {
     text-align: center;
     font-size: 2em;
     margin: 30px 0 0 0 ;
+}
+#event-box {
+    width: 60%;
+    padding-bottom: 80px;
+    margin: 0 0 0 20%;
+    background-color: #19fa7798;
+    border-radius: 10px;
+}
+#event-info {
+    max-width: 64%;
+    min-width: 64%;
+    max-height: 150px;
+    padding: 5px;
+    margin: 10px 0 0px 17%;
+    background-color: #0000006b;
+    font-size: 14px;
+    color: #00ad00;
+    overflow-y: scroll;
+    border-radius: 5px;
+    padding: 0 10px 10px 5px 0;
+    border: 1px solid #524d4d69;
+}
+#event-info p {
+    margin: 0;
+    padding: 0;
 }

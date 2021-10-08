@@ -100,15 +100,30 @@ function pushArray() {
 }
 function analize() {
     const exit = document.getElementById('output-info')
-    let info = document.createElement('p')
-    if (exit.childElementCount >= 4) {
+    if (exit.childElementCount >= 3) {
         for (let i = 0;i <= 3;i+=1) {exit.removeChild(exit.lastChild)}
-    } else {
-        info.innerHTML = `Array length = ${array.length}`
-        exit.appendChild(info)
     }
-        
-    
+    let bigger = 0
+    array.forEach((item) => {
+        if (item.length > bigger){
+            bigger = item.length
+        }
+    })
+    let smaller = bigger
+    array.forEach((item) => {
+        if (item.length < smaller){
+            smaller = item.length
+        }
+    })
+    let info1 = document.createElement('p')
+    info1.innerHTML = `Array size = ${array.length} elements`
+    exit.appendChild(info1)
+    let info2 = document.createElement('p')
+    info2.innerHTML = `Biggest string = ${bigger} of length`
+    exit.appendChild(info2)
+    let info3 = document.createElement('p')
+    info3.innerHTML = `Smallest string = ${smaller} of length`
+    exit.appendChild(info3)
 }
 let array = []
 const dbutton = document.querySelector('#dbutton')
@@ -149,3 +164,5 @@ const back = document.getElementById('back')
 const next = document.getElementById('next')
 next.addEventListener('click', upStyle)
 back.addEventListener('click', downStyle)
+
+// Event box section
