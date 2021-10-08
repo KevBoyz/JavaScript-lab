@@ -102,3 +102,36 @@ let array = []
 let dbutton = document.querySelector('#dbutton')
 box = document.getElementById('array-box')
 dbutton.addEventListener('click', validate)
+
+//Style swicher section
+function upStyle(){
+    bar = document.getElementById('img-output')
+    if (bar.style.backgroundColor == '') {
+        bar.style.backgroundColor = 'rgba(25, 250, 119, 0.596)'
+    }
+    if (bar.style.backgroundColor == 'rgba(2, 129, 248, 0.596)') {
+        bar.style.backgroundColor = 'rgba(25, 250, 119, 0.596)'
+    } else {
+        bar.style.backgroundColor = colors[colors.indexOf(bar.style.backgroundColor) + 1]
+    }
+}
+function downStyle(){
+    bar = document.getElementById('img-output')
+    if (bar.style.backgroundColor == '') {
+        bar.style.backgroundColor = 'rgba(25, 250, 119, 0.596)'
+    }
+    if (bar.style.backgroundColor == 'rgba(25, 250, 119, 0.596)') {
+        bar.style.backgroundColor = 'rgba(2, 129, 248, 0.596)'
+    } else {
+        if (colors[colors.indexOf(bar.style.backgroundColor) - 1] == -1) {
+            bar.style.backgroundColor == 'rgba(2, 129, 248, 0.596)'
+        } else {
+            bar.style.backgroundColor = colors[colors.indexOf(bar.style.backgroundColor) - 1]
+        }
+    }
+}
+const colors = ['rgba(25, 250, 119, 0.596)', 'red', 'rgba(2, 129, 248, 0.596)']
+const back = document.getElementById('back')
+const next = document.getElementById('next')
+next.addEventListener('click', upStyle)
+back.addEventListener('click', downStyle)

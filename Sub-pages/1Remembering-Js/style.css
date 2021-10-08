@@ -122,7 +122,7 @@ main {
     width: 60%;
     margin: 0 20% 2px 20%;
     background-color: #19fa776c;
-    color: rgba(255, 255, 255, 0.829);
+    color: #ffffffd3;
     text-shadow: 1px 1px 2px #000000;
     cursor:pointer;
     letter-spacing: 10px;
@@ -168,4 +168,46 @@ main {
 #array-pg #dbutton {
     width: 25%;
     cursor: pointer;
+}
+#analize {
+    width: 47%;
+    margin: 0 25% 10px 25%;
+    cursor: pointer;
+    background-color: #19fa776c;
+    color: #ffffffd3;
+    text-shadow: 1px 1px 2px #000000;
+    font-weight: 500;
+    letter-spacing: 5px
+}
+#output-info {
+    max-width: 47%;
+    min-width: 45%;
+    padding: 5px;
+    margin: 0 25% 10px 24%;
+    background-color: #0000006b;
+    font-size: 14px;
+    color: #00ad00;
+}
+#output-info p {
+    margin: 0;
+    padding: 0;
+}
+#image-pg div{
+    width: 50%;
+    margin: 15px 25% 0 25%;
+    display: flex;
+}
+#image-pg input {
+    width: 50%;
+    margin: 0 5px 0 5px
+}
+#img-output {
+    background-color: rgba(25, 250, 119, 0.596);
+    height: 10px;
+    border-radius: 20px;
+}
+#titleup {
+    text-align: center;
+    font-size: 2em;
+    margin: 30px 0 0 0 ;
 }
