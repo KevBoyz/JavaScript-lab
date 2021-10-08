@@ -133,6 +133,7 @@ dbutton.addEventListener('click', validate)
 analysisbt.addEventListener('click', analize)
 
 //Style swicher section
+// Trocar todas as cores com style swicher
 function upStyle(){
     bar = document.getElementById('img-output')
     if (bar.style.backgroundColor == '') {
@@ -166,3 +167,28 @@ next.addEventListener('click', upStyle)
 back.addEventListener('click', downStyle)
 
 // Event box section
+function cl() {
+    let info = document.createElement('p')
+    info.innerHTML = '[ click ] - listned on {div#event-box} element'
+    ibox.appendChild(info)
+    ebox.style.backgroundColor = 'rgba(2, 129, 248, 0.596)'
+}
+function me() {
+    let info = document.createElement('p')
+    info.innerHTML = '[ mouse enter ] - listned on {div#event-box} element'
+    ibox.appendChild(info)
+    ebox.style.backgroundColor = 'red'
+}
+function ml() {
+    let info = document.createElement('p')
+    info.innerHTML = '[ mouse leave ] - listned on {div#event-box} element'
+    ibox.appendChild(info)
+    ebox.style.backgroundColor = '#00ad00'
+}
+
+const ebox = document.getElementById('event-box')
+const ibox = document.getElementById('event-info')
+
+ebox.addEventListener('click', cl)
+ebox.addEventListener('mouseenter', me)
+ebox.addEventListener('mouseleave', ml)
