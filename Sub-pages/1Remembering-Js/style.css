@@ -65,8 +65,8 @@ main {
 .content {
     background: #0000002f;
     height: 75%;
-    min-width: 530px;
-    max-width: 550;
+    min-width: 590px;
+    max-width: 600px;
     margin-bottom: 10px;
 }
 #login-pg {
@@ -161,12 +161,12 @@ main {
     margin: 0 25% 10px 25%;
 }
 #array-pg #array-box{
-    max-width: 47%;
+    width: 47%;
     margin: 0 25% 10px 25%;
     cursor: pointer;
 }
 #array-pg #dbutton {
-    width: 25%;
+    width: 32%;
     cursor: pointer;
 }
 #analize {

@@ -98,10 +98,24 @@ function pushArray() {
     box.appendChild(opt)
     document.getElementById('data').value = ''
 }
+function analize() {
+    const exit = document.getElementById('output-info')
+    let info = document.createElement('p')
+    if (exit.childElementCount >= 4) {
+        for (let i = 0;i <= 3;i+=1) {exit.removeChild(exit.lastChild)}
+    } else {
+        info.innerHTML = `Array length = ${array.length}`
+        exit.appendChild(info)
+    }
+        
+    
+}
 let array = []
-let dbutton = document.querySelector('#dbutton')
+const dbutton = document.querySelector('#dbutton')
+const analysisbt = document.getElementById('analize')
 box = document.getElementById('array-box')
 dbutton.addEventListener('click', validate)
+analysisbt.addEventListener('click', analize)
 
 //Style swicher section
 function upStyle(){
