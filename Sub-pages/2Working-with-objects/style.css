@@ -1,5 +1,6 @@
 ::-webkit-scrollbar { /* width */
-    width: 10px;
+    width: 7px;
+    height: 7px;
 }
 ::-webkit-scrollbar-track { /* Track */
     background: #292927; 
@@ -10,6 +11,10 @@
 ::-webkit-scrollbar-thumb:hover { /* Handle on hover */
     background: #555; 
 }
+::-webkit-scrollbar-corner{
+    background: #292927; 
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #242423;
@@ -56,6 +61,16 @@ header a {
     text-decoration: none;
 }
 header h2 {font-size: 1.95em;}
+.title {
+    text-align: center;
+    font-size: 2em;
+}
+.bbuton {
+    background-color: #19fa775b;
+    color: #ffffffd3;
+    text-shadow: 1px 1px 2px #000000;
+    cursor:pointer;
+}
 #logo-img {
     padding: 10px 0 0 10px;
     width: 80px;
@@ -78,4 +93,104 @@ header h2 {font-size: 1.95em;}
     min-width: 590px;
     max-width: 600px;
     margin-bottom: 10px;
+}
+#obj-fab-pg {
+    max-width: 80%;
+    min-width: 80%;
+    margin: 0 0 0 10%;
+}
+#obj-fab-pg fieldset {
+    border: none;
+    padding: 0;
+}
+#new-ob-btn {
+    width: 100%;
+    margin-bottom: 5px;
+}
+#obj-key, #obj-key-val {
+    width: 25%;
+}
+#add-atb-btn {
+    width: 44.7%;
+}
+#obj-preview {
+    max-width: 52%;
+    min-width: 52%;
+    height: 20px;
+    padding: 5px 5px 9px 5px;
+    margin: 5px 0 0 0;
+    background-color: #0000006b;
+    font-size: 14px;
+    color: #00ad00;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    border-radius: 5px;
+    padding: 0 10px 10px 5px 0;
+    border: 1px solid #524d4d69;
+}
+#inline {
+    max-width: 100%;
+    display:flex;
+}
+#display-p {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+#cl-obj {
+    height: 30px;
+    margin: 6px 6px 6px 3px;
+}
+#obj-save-btn {
+    height: 30px;
+    margin: 6px 0 0 0;
+    width: 25%;
+}
+#double-div {
+    display: flex;
+    width: 100%;
+}
+#double-div #mth-options {
+    margin:0;
+    width: 54%;
+    background-color: #191919;
+    border-radius: 10px;
+    padding:3px 0 5px 0;
+    height: 66px;
+}
+#double-div #mth-options #main-lb {
+    font-size: 15.4px;
+    text-align: center;
+    width:100%;
+    display: block;
+}
+#double-div #mth-options .options {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 2px;
+}
+#opt-grp {
+    padding-top: 5px;
+}
+#double-div #buttons {
+    margin: 0 0 0 3px;
+    width: 44.5%;
+}
+#double-div #buttons input {
+    width: 100%;
+    margin-bottom: 5px;
+}
+#obj-arr-preview {
+    width: 97.5%;
+    height: 55px; 
+    margin: 5px 0 0 0;
+    padding: 5px;
+    background-color: #0000006b;
+    font-size: 14px;
+    color: #00ad009d;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    border-radius: 5px;
+    padding: 0 10px 10px 5px 0;
+    border: 1px solid #524d4d69;
 }

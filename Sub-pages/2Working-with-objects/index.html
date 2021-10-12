@@ -25,7 +25,54 @@
     </header>
     <main>
         <div class="content">
-
+            <form id='obj-fab-pg'>
+                <h2 class='title'>Object Factory</h2>
+                <fieldset>
+                    <input type="button" value="Create a new empty object" id="new-ob-btn" class='bbuton'>
+                    <input type="text" name="key" id="obj-key" placeholder="Atribute Key" disabled="true">
+                    <input type="text" name="value" id="obj-key-val" placeholder="Key Value" disabled="true">
+                    <input type="button" value="Add atribute" id='add-atb-btn' disabled="true">
+                </fieldset>
+                <div id='inline'>
+                    <div id='obj-preview'><p id='display-p'>ObjectPreview - Start creating new one</p></div>
+                    <input type="button" value="Clear object" id='cl-obj' disabled="true">
+                    <input type="button" value="Next Step ->" id='obj-save-btn' disabled="true">
+                </div>
+                <fieldset id='double-div'>
+                    <div id='mth-options'>
+                        <label id='main-lb'>Select some methods for your object</label>
+                        <div id='opt-grp'>
+                            <div class='options'>
+                                <div>
+                                    <input type="checkbox" name="" id="" disabled="true">
+                                    <label for="">Greeting</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="" id="" disabled="true">
+                                    <label for="">What am I?</label>
+                                </div>
+                            </div>
+                            <div class='options'>
+                                <div>
+                                    <input type="checkbox" name="" id="" disabled="true">
+                                    <label for="">My info--</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="" id="" disabled="true">
+                                    <label for="">tPhilosophy</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id='buttons'>
+                        <input type="button" value="Restore methods" disabled="true">
+                        <input type="button" value="Apply methods" disabled="true">
+                        <input type="button" value="Save Object" disabled="true">
+                    </div>
+                </fieldset>
+                <div id='obj-arr-preview'>
+                </div>
+            </form>
         </div>
         <div class="content">
             
