@@ -141,7 +141,7 @@ header h2 {font-size: 1.95em;}
     height: 30px;
     margin: 6px 6px 6px 3px;
 }
-#obj-save-btn {
+#obj-del-atb {
     height: 30px;
     margin: 6px 0 0 0;
     width: 25%;
@@ -187,7 +187,7 @@ header h2 {font-size: 1.95em;}
     padding: 5px;
     background-color: #0000006b;
     font-size: 14px;
-    color: #00ad009d;
+    color: #ff060659;
     overflow-x: scroll;
     overflow-y: scroll;
     border-radius: 5px;
