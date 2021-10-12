@@ -94,12 +94,12 @@ header h2 {font-size: 1.95em;}
     max-width: 600px;
     margin-bottom: 10px;
 }
-#obj-fab-pg {
+#obj-fab-pg, #obj-handling-pg {
     max-width: 80%;
     min-width: 80%;
     margin: 0 0 0 10%;
 }
-#obj-fab-pg fieldset {
+fieldset {
     border: none;
     padding: 0;
 }
@@ -194,4 +194,16 @@ header h2 {font-size: 1.95em;}
     padding: 0 10px 10px 5px 0;
     border: 1px solid #524d4d69;
     white-space: nowrap;
+}
+#array-box {
+    width: 99.7%;
+}
+#inputs {
+    margin: 2px 0 0 0;
+    width: 100%;
+    display: flex;
+}
+#inputs input {
+    width: 20%;
+    margin: 0 1px 0 1px;
 }

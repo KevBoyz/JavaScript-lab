@@ -148,8 +148,17 @@ function objSave() {
     newObject.style.backgroundColor = '#00ad009d'
     newObject.style.color = 'white'
     newObject.style.textShadow = '1px 1px 2px black'
-    object = new Object()
     preview.innerHTML = 'ObjectPreview - Start creating new one'
+    objOpt = document.createElement('option')
+    objOpt.text = printObject(object)
+    objOpt.value = array.length
+    arrayBox.disabled = false
+    arrayBox.appendChild(objOpt)
+    dell.disabled = false
+    dell.style.backgroundColor = '#ff060659'
+    dell.style.color = 'white'
+    dell.style.textShadow = '1px 1px 2px black'
+    object = new Object()
 }
 let object = {}
 let array = []
@@ -175,3 +184,78 @@ applyMth.addEventListener('click', addMth)
 restoreMth.addEventListener('click', restoreMthds)
 save.addEventListener('click', objSave)
 
+//Handling section 
+function objChange() {
+    if (arrayBox.value == -1) {
+        hbGre.disabled = true
+        hbWmi.disabled = true
+        hbMyi.disabled = true
+        hbTph.disabled = true
+        hbGre.style.backgroundColor = '#636363'
+        hbGre.style.color = '#454545'
+        hbGre.style.textShadow = 'none'
+        hbWmi.style.backgroundColor = '#636363'
+        hbWmi.style.color = '#454545'
+        hbWmi.style.textShadow = 'none'
+        hbMyi.style.backgroundColor = '#636363'
+        hbMyi.style.color = '#454545'
+        hbMyi.style.textShadow = 'none'
+        hbTph.style.backgroundColor = '#636363'
+        hbTph.style.color = '#454545'
+        hbTph.style.textShadow = 'none'
+    } else {
+        actobj = array[arrayBox.value - 1]
+        if (actobj.hasOwnProperty('greeting')) {
+            hbGre.disabled = false
+            hbGre.style.backgroundColor = '#00ad009d'
+            hbGre.style.color = 'white'
+            hbGre.style.textShadow = '1px 1px 2px black'
+        } else {
+            hbGre.disabled = true
+            hbGre.style.backgroundColor = '#636363'
+            hbGre.style.color = '#454545'
+            hbGre.style.textShadow = 'none'
+        }
+        if (actobj.hasOwnProperty('whamI')) {
+            hbWmi.disabled = false
+            hbWmi.style.backgroundColor = '#00ad009d'
+            hbWmi.style.color = 'white'
+            hbWmi.style.textShadow = '1px 1px 2px black'
+        } else {
+            hbWmi.disabled = true
+            hbWmi.style.backgroundColor = '#636363'
+            hbWmi.style.color = '#454545'
+            hbWmi.style.textShadow = 'none'
+        }
+        if (actobj.hasOwnProperty('myinfo')) {
+            hbMyi.disabled = false
+            hbMyi.style.backgroundColor = '#00ad009d'
+            hbMyi.style.color = 'white'
+            hbMyi.style.textShadow = '1px 1px 2px black'
+        } else {
+            hbMyi.disabled = true
+            hbMyi.style.backgroundColor = '#636363'
+            hbMyi.style.color = '#454545'
+            hbMyi.style.textShadow = 'none'
+        }
+        if (actobj.hasOwnProperty('tphil')) {
+            hbTph.disabled = false
+            hbTph.style.backgroundColor = '#00ad009d'
+            hbTph.style.color = 'white'
+            hbTph.style.textShadow = '1px 1px 2px black'
+        } else {
+            hbTph.disabled = true
+            hbTph.style.backgroundColor = '#636363'
+            hbTph.style.color = '#454545'
+            hbTph.style.textShadow = 'none'
+        }
+    }
+}
+
+const arrayBox= document.getElementById('array-box')
+const dell = document.getElementById('del-obj')
+const hbGre = document.getElementById('hb-gre')
+const hbWmi = document.getElementById('hb-wmi')
+const hbMyi = document.getElementById('hb-myi')
+const hbTph = document.getElementById('hb-tph')
+arrayBox.addEventListener('change', objChange)
