@@ -25,6 +25,8 @@ function addAtribute() {
     let value = document.getElementById('obj-key-val').value
     object[key] = value
     preview.innerHTML = printObject(object)
+    document.getElementById('obj-key').value = ''
+    document.getElementById('obj-key-val').value = ''
 }
 let object = ''
 const preview = document.getElementById('display-p')
