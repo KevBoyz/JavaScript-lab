@@ -187,10 +187,11 @@ header h2 {font-size: 1.95em;}
     padding: 5px;
     background-color: #0000006b;
     font-size: 14px;
-    color: #ff060659;
+    color: #00ad00;
     overflow-x: scroll;
     overflow-y: scroll;
     border-radius: 5px;
     padding: 0 10px 10px 5px 0;
     border: 1px solid #524d4d69;
+    white-space: nowrap;
 }

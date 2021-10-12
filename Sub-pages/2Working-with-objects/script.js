@@ -1,5 +1,16 @@
 // Object Factory section
-// delete meuObjeto.propriedade3
+const greeting = function () {
+    window.alert('Hello World')
+}
+const whamI = function() {
+    window.alert('I am is')
+}
+const myinfo = function() {
+    window.alert(`prototype`)
+}
+const tphil = function() {
+    window.alert(`prototype`)
+}
 function unlock() {
     newObject.style.backgroundColor = '#636363'
     newObject.style.color = '#454545'
@@ -54,7 +65,6 @@ function addAtribute() {
         document.getElementById('obj-key').value = ''
         document.getElementById('obj-key-val').value = ''
     }
-    
 }
 function clear() {
     object = new Object()
@@ -70,9 +80,82 @@ function del() {
     }
     document.getElementById('obj-key').value = ''
 }
-
-let object = ''
+function addMth(){
+    cbGreeting = document.getElementById('greeting')
+    cbWhamI = document.getElementById('whamI')
+    cbMyinfo = document.getElementById('myinfo')
+    cbTphil = document.getElementById('tphil')
+    if (cbGreeting.checked) {
+        object.greeting = greeting
+    }
+    if (cbWhamI.checked) {
+        object.whamI = whamI
+    }
+    if (cbMyinfo.checked) {
+        object.myinfo = myinfo
+    }
+    if (cbTphil.checked) {
+        object.tphil = tphil
+    }
+    preview.innerHTML = printObject(object)
+}
+function restoreMthds() {
+    delete object.greeting
+    delete object.whamI
+    delete object.myinfo
+    delete object.tphil
+    preview.innerHTML = printObject(object)
+    cbGreeting = document.getElementById('greeting').checked = false
+    cbWhamI = document.getElementById('whamI').checked = false
+    cbMyinfo = document.getElementById('myinfo').checked = false
+    cbTphil = document.getElementById('tphil').checked = false
+}
+function objSave() {
+    array.push(object)
+    arrPreview.innerHTML += printObject(object)
+    arrPreview.appendChild(br)
+    newObject.disabled = false
+    document.getElementById('obj-key').disabled = true
+    document.getElementById('obj-key-val').disabled = true
+    clObj.disabled = true
+    delobj.disabled = true
+    adAtb.disabled = true
+    restoreMth.disabled = true
+    applyMth.disabled = true
+    save.disabled = true
+    cbGreeting.disabled = true
+    cbWhamI.disabled = true
+    cbMyinfo.disabled = true
+    cbTphil.disabled = true
+    clObj.style.backgroundColor = '#636363'
+    clObj.style.color = '#454545'
+    clObj.style.textShadow = 'none'
+    delobj.style.backgroundColor = '#636363'
+    delobj.style.color = '#454545'
+    delobj.style.textShadow = 'none'
+    adAtb.style.backgroundColor = '#636363'
+    adAtb.style.color = '#454545'
+    adAtb.style.textShadow = 'none'
+    applyMth.style.backgroundColor = '#636363'
+    applyMth.style.color = '#454545'
+    applyMth.style.textShadow = 'none'
+    save.style.backgroundColor = '#636363'
+    save.style.color = '#454545'
+    save.style.textShadow = 'none'
+    restoreMth.style.backgroundColor = '#636363'
+    restoreMth.style.color = '#454545'
+    restoreMth.style.textShadow = 'none'
+    newObject.style.backgroundColor = '#00ad009d'
+    newObject.style.color = 'white'
+    newObject.style.textShadow = '1px 1px 2px black'
+    object = new Object()
+    preview.innerHTML = 'ObjectPreview - Start creating new one'
+}
+let object = {}
+let array = []
+let br = document.createElement('br')
 const preview = document.getElementById('display-p')
+const arrPreview = document.getElementById('obj-arr-preview')
 const newObject = document.getElementById('new-ob-btn')
 const adAtb = document.getElementById('add-atb-btn')
 const clObj = document.getElementById('cl-obj')
@@ -80,12 +163,15 @@ const delobj = document.getElementById('obj-del-atb')
 const restoreMth = document.getElementById('restore-mth')
 const applyMth = document.getElementById('apply-mth')
 const save = document.getElementById('save-obj')
-const cbGreeting = document.getElementById('greeting')
-const cbWhamI = document.getElementById('whamI')
-const cbMyinfo = document.getElementById('myinfo')
-const cbTphil = document.getElementById('tphil')
+let cbGreeting = document.getElementById('greeting')
+let cbWhamI = document.getElementById('whamI')
+let cbMyinfo = document.getElementById('myinfo')
+let cbTphil = document.getElementById('tphil')
 newObject.addEventListener('click', unlock)
 adAtb.addEventListener('click', addAtribute)
 clObj.addEventListener('click', clear)
 delobj.addEventListener('click', del)
+applyMth.addEventListener('click', addMth)
+restoreMth.addEventListener('click', restoreMthds)
+save.addEventListener('click', objSave)
 
