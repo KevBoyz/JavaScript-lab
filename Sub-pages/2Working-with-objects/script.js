@@ -1,15 +1,46 @@
 // Object Factory section
 const greeting = function () {
-    window.alert('Hello World')
+    if (mthOutput.childElementCount > 0){
+        for (i = 0;i <= mthOutput.childElementCount + 1;i++){
+            mthOutput.removeChild(mthOutput.lastChild)
+        }
+    }
+    time = new Date().getHours()
+    if (time <= 12) {
+        info = document.createElement('p')
+        info.innerHTML = `Good morning, now are: ${time} houers.`
+        mthOutput.appendChild(info)
+    } else if (time < 12 && time > 18) {
+        info = document.createElement('p')
+        info.innerHTML = `Good afternoon, now are: ${time} houers.`
+        mthOutput.appendChild(info)
+    } else {
+        info = document.createElement('p')
+        info.innerHTML = `Good night, now are: ${time} houers.`
+        mthOutput.appendChild(info)
+    }   
 }
 const whamI = function() {
-    window.alert('I am is')
+    window.alert('I am your creation')
 }
 const myinfo = function() {
-    window.alert(`prototype`)
+    if (mthOutput.childElementCount > 0){
+        for (i = 0;i <= mthOutput.childElementCount + 1;i++){
+            mthOutput.removeChild(mthOutput.lastChild)
+        }
+    }
+    info = document.createElement('p')
+    info.innerHTML = `I don't have a constructor class, you, are my constructor`
+    mthOutput.appendChild(info)
+    info = document.createElement('p')
+    info.innerHTML = `Keys: (${Object.keys(this)})\n`
+    mthOutput.appendChild(info)
+    info = document.createElement('p')
+    info.innerHTML = `Position in array: ${arrayBox.value - 1}`
+    mthOutput.appendChild(info)
 }
 const tphil = function() {
-    window.alert(`prototype`)
+    window.alert(`This method is a filler, nothing here`)
 }
 function unlock() {
     newObject.style.backgroundColor = '#636363'
@@ -112,7 +143,9 @@ function restoreMthds() {
 }
 function objSave() {
     array.push(object)
-    arrPreview.innerHTML += printObject(object)
+    p = document.createElement('p')
+    p.innerHTML = printObject(object)
+    arrPreview.appendChild(p)
     arrPreview.appendChild(br)
     newObject.disabled = false
     document.getElementById('obj-key').disabled = true
@@ -154,10 +187,7 @@ function objSave() {
     objOpt.value = array.length
     arrayBox.disabled = false
     arrayBox.appendChild(objOpt)
-    dell.disabled = false
-    dell.style.backgroundColor = '#ff060659'
-    dell.style.color = 'white'
-    dell.style.textShadow = '1px 1px 2px black'
+    dell.disabled = true
     object = new Object()
 }
 let object = {}
@@ -191,6 +221,7 @@ function objChange() {
         hbWmi.disabled = true
         hbMyi.disabled = true
         hbTph.disabled = true
+        dell.disabled = true
         hbGre.style.backgroundColor = '#636363'
         hbGre.style.color = '#454545'
         hbGre.style.textShadow = 'none'
@@ -203,6 +234,9 @@ function objChange() {
         hbTph.style.backgroundColor = '#636363'
         hbTph.style.color = '#454545'
         hbTph.style.textShadow = 'none'
+        dell.style.backgroundColor = '#636363'
+        dell.style.color = '#454545'
+        dell.style.textShadow = 'none'
     } else {
         actobj = array[arrayBox.value - 1]
         if (actobj.hasOwnProperty('greeting')) {
@@ -249,6 +283,21 @@ function objChange() {
             hbTph.style.color = '#454545'
             hbTph.style.textShadow = 'none'
         }
+        dell.disabled = false
+        dell.style.backgroundColor = '#ff060659'
+        dell.style.color = 'white'
+        dell.style.textShadow = '1px 1px 2px black'
+    }
+}
+function deletion() {
+    arrPreview.removeChild(arrPreview.children[arrayBox.value - 1])
+    arrayBox.removeChild(document.querySelector(`option[value='${arrayBox.value}']`))
+    array.splice(-1, Number(arrayBox.value))
+    if (arrayBox.value == -1) {
+        dell.disabled = true
+        dell.style.backgroundColor = '#636363'
+        dell.style.color = '#454545'
+        dell.style.textShadow = 'none'
     }
 }
 
@@ -258,4 +307,13 @@ const hbGre = document.getElementById('hb-gre')
 const hbWmi = document.getElementById('hb-wmi')
 const hbMyi = document.getElementById('hb-myi')
 const hbTph = document.getElementById('hb-tph')
+const mthOutput = document.getElementById('mth-output')
 arrayBox.addEventListener('change', objChange)
+dell.addEventListener('click', deletion)
+hbGre.addEventListener('click', function() {array[arrayBox.value - 1].greeting()})
+hbWmi.addEventListener('click', function() {array[arrayBox.value - 1].whamI()})
+hbMyi.addEventListener('click', function() {array[arrayBox.value - 1].myinfo()})
+hbTph.addEventListener('click', function() {array[arrayBox.value - 1].tphil()})
+
+
+

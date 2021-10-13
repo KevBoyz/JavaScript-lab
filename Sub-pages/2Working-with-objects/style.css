@@ -195,6 +195,10 @@ fieldset {
     border: 1px solid #524d4d69;
     white-space: nowrap;
 }
+#obj-arr-preview p {
+    margin: 0;
+    padding: 0;
+}
 #array-box {
     width: 99.7%;
 }
@@ -206,4 +210,13 @@ fieldset {
 #inputs input {
     width: 20%;
     margin: 0 1px 0 1px;
+}
+#mth-output {
+    width: 80%;
+    margin: 10px 0 0 10%;
+    color:#00ad00 ;
+}
+#mth-output p {
+    margin: 2px 0 0 0;
+    padding: 2px 2px 2px 2px;
 }
