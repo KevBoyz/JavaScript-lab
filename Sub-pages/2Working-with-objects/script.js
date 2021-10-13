@@ -294,7 +294,23 @@ function deletion() {
     arrayBox.removeChild(document.querySelector(`option[value='${arrayBox.value}']`))
     array.splice(-1, Number(arrayBox.value))
     if (arrayBox.value == -1) {
+        hbGre.disabled = true
+        hbWmi.disabled = true
+        hbMyi.disabled = true
+        hbTph.disabled = true
         dell.disabled = true
+        hbGre.style.backgroundColor = '#636363'
+        hbGre.style.color = '#454545'
+        hbGre.style.textShadow = 'none'
+        hbWmi.style.backgroundColor = '#636363'
+        hbWmi.style.color = '#454545'
+        hbWmi.style.textShadow = 'none'
+        hbMyi.style.backgroundColor = '#636363'
+        hbMyi.style.color = '#454545'
+        hbMyi.style.textShadow = 'none'
+        hbTph.style.backgroundColor = '#636363'
+        hbTph.style.color = '#454545'
+        hbTph.style.textShadow = 'none'
         dell.style.backgroundColor = '#636363'
         dell.style.color = '#454545'
         dell.style.textShadow = 'none'
