@@ -8,15 +8,15 @@ const greeting = function () {
     time = new Date().getHours()
     if (time <= 12) {
         info = document.createElement('p')
-        info.innerHTML = `Good morning, now are: ${time} houers.`
+        info.innerHTML = `Good morning, now are: ${time} hours.`
         mthOutput.appendChild(info)
     } else if (time < 12 && time > 18) {
         info = document.createElement('p')
-        info.innerHTML = `Good afternoon, now are: ${time} houers.`
+        info.innerHTML = `Good afternoon, now are: ${time} hours.`
         mthOutput.appendChild(info)
     } else {
         info = document.createElement('p')
-        info.innerHTML = `Good night, now are: ${time} houers.`
+        info.innerHTML = `Good night, now are: ${time} hours.`
         mthOutput.appendChild(info)
     }   
 }
@@ -299,8 +299,12 @@ function deletion() {
         dell.style.color = '#454545'
         dell.style.textShadow = 'none'
     }
+    if (mthOutput.childElementCount > 0){
+        for (i = 0;i <= mthOutput.childElementCount + 1;i++){
+            mthOutput.removeChild(mthOutput.lastChild)
+        }
+    }
 }
-
 const arrayBox= document.getElementById('array-box')
 const dell = document.getElementById('del-obj')
 const hbGre = document.getElementById('hb-gre')
@@ -314,6 +318,3 @@ hbGre.addEventListener('click', function() {array[arrayBox.value - 1].greeting()
 hbWmi.addEventListener('click', function() {array[arrayBox.value - 1].whamI()})
 hbMyi.addEventListener('click', function() {array[arrayBox.value - 1].myinfo()})
 hbTph.addEventListener('click', function() {array[arrayBox.value - 1].tphil()})
-
-
-
