@@ -24,7 +24,64 @@
         </nav>
     </header>
     <main>
-        <h1>Nothing today, come back tomorrow!</h1>
+        <div class='content'>
+            <form id='pg1'>
+                <h2 class='title'>Arrays Display</h2>
+                <div class='container'>
+                    <label>Array 1: </label>
+                    <div class='array-display' id='ardisp-1'><p></p></div>
+                </div>
+                <div class='container'>
+                    <label>Array 2: </label>
+                    <div class='array-display' id='ardisp-2'><p></p></div>
+                </div>
+                <div class='container'>
+                    <label>Array 3: </label>
+                    <div class='array-display' id='ardisp-3'><p></p></div>
+                </div>
+                <div id='inline'>
+                    <input type="button" id="presets" value="Load Presets">
+                    <input type="button" id="cl-all" value="Clear all">
+                </div>
+            </form>
+            <form>
+                <h2 class='title'>Testing Methods</h2>
+                <select id="mth-tester-selector">
+                    <option value="1">Array 1</option>
+                    <option value="2">Array 2</option>
+                    <option value="3">Array 3</option>
+                </select>
+            </form>
+        </div>
+        <div class='content'>
+            <form id='handling-pg'>
+                <h2 class='title'>Edit Arrays</h2>
+                <div class='inline'>
+                    <select id="handling-selector">
+                        <option value="1">Array 1</option>
+                        <option value="2">Array 2</option>
+                        <option value="3">Array 3</option>
+                    </select>
+                    <input type="text" id="he-value" placeholder="Value">
+                    <div id='div' class='inline'>
+                        <input type="button" id="he-push" value="Push">
+                        <input type="button" id="he-remove" value="Remove">
+                        <input type="button" id="he-clear" value="Clear">
+                    </div>
+                </div class='inline'>
+                <div class='inline'>
+                    <input type="button" id="he-full-sort" value="Full Sort">
+                    <input type="button" id="he-default-sort" value="Default Sort">
+                    <input type="button" id="he-sort-numbers" value="Sort Numbers">
+                    <input type="button" id="he-reverse-sort" value="Reverse Sort">
+                </div class='inline'>
+                <div class='inline'>
+                    <input type="button" id='remove-dup' value="Remove duplicates">
+                    <input type="button" id='concat' value="Concat with">
+                </div>
+                
+            </form>
+        </div>
     </main>
     <footer></footer>
 

@@ -103,3 +103,50 @@ fieldset {
     border: none;
     padding: 0;
 }
+.array-display {
+    width: 84.5%;
+    height: 20px;
+    padding: 5px 5px 9px 5px;
+    margin: 5px 0 0 0;
+    background-color: #0000006b;
+    font-size: 14px;
+    color: #00ad00;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    border-radius: 5px;
+    padding: 0 10px 10px 5px 0;
+    border: 1px solid #524d4d69;
+}
+.array-display p {
+    margin: 0;
+    padding: 0;
+}
+.inline {
+    display: flex;
+}
+#presets, #cl-all {
+    width: 100%;
+    margin-top: 10px;
+}
+form {
+    width: 80%;
+    margin-left: 10%;
+}
+.container {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+}
+label {
+    margin-top: 12px;
+    margin-right: 5px;
+}
+#handling-pg input {
+    margin-bottom: 2px;
+}
+#handling-pg div input {
+    width: 100%;
+}
+#handling-selector {
+    height: 21px;
+}
