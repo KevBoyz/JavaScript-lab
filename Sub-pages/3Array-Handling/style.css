@@ -94,11 +94,6 @@ header h2 {font-size: 1.95em;}
     max-width: 600px;
     margin-bottom: 10px;
 }
-#obj-fab-pg, #obj-handling-pg {
-    max-width: 80%;
-    min-width: 80%;
-    margin: 0 0 0 10%;
-}
 fieldset {
     border: none;
     padding: 0;
@@ -120,9 +115,11 @@ fieldset {
 .array-display p {
     margin: 0;
     padding: 0;
+    white-space: nowrap;
 }
 .inline {
     display: flex;
+    flex-direction: row;
 }
 #presets, #cl-all {
     width: 100%;
@@ -144,9 +141,23 @@ label {
 #handling-pg input {
     margin-bottom: 2px;
 }
-#handling-pg div input {
+.w100 {
     width: 100%;
 }
-#handling-selector {
+#edit-selector {
     height: 21px;
+    width: 30%;
+}
+#ed-value {
+    width:66.8%;
+    margin-left: -5px;
+}
+#tst-page input[type="button"] {
+    width: 100%;
+}
+#div1{
+    width: 50%;
+}
+#div2{
+    width: 50%;
 }

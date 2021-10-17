@@ -29,58 +29,78 @@
                 <h2 class='title'>Arrays Display</h2>
                 <div class='container'>
                     <label>Array 1: </label>
-                    <div class='array-display' id='ardisp-1'><p></p></div>
+                    <div class='array-display' id='ardisp-1'><p>[ ]</p></div>
                 </div>
                 <div class='container'>
                     <label>Array 2: </label>
-                    <div class='array-display' id='ardisp-2'><p></p></div>
+                    <div class='array-display' id='ardisp-2'><p>[ ]</p></div>
                 </div>
                 <div class='container'>
                     <label>Array 3: </label>
-                    <div class='array-display' id='ardisp-3'><p></p></div>
+                    <div class='array-display' id='ardisp-3'><p>[ ]</p></div>
                 </div>
                 <div id='inline'>
                     <input type="button" id="presets" value="Load Presets">
                     <input type="button" id="cl-all" value="Clear all">
                 </div>
             </form>
-            <form>
+            <form id='tst-page'>
                 <h2 class='title'>Testing Methods</h2>
-                <select id="mth-tester-selector">
-                    <option value="1">Array 1</option>
-                    <option value="2">Array 2</option>
-                    <option value="3">Array 3</option>
-                </select>
+                <div class='inline'>
+                    <select id="mth-tester-selector">
+                        <option value="1">Array 1</option>
+                        <option value="2">Array 2</option>
+                        <option value="3">Array 3</option>
+                    </select>
+                    <input type="button" value="Map">
+                    <input type="button" value="Filter">
+                    <input type="button" value="Reduce">
+                </div>
+                <div class='inline'>
+                    <input type="button" value="Pop">
+                    <input type="button" value="Shift">
+                    <input type="button" value="Unshift">
+                    <input type="button" value="ToString">
+                    <input type="button" value="Join">
+                    <input type="button" value="Slice">
+                </div>
             </form>
         </div>
         <div class='content'>
             <form id='handling-pg'>
                 <h2 class='title'>Edit Arrays</h2>
-                <div class='inline'>
-                    <select id="handling-selector">
-                        <option value="1">Array 1</option>
-                        <option value="2">Array 2</option>
-                        <option value="3">Array 3</option>
-                    </select>
-                    <input type="text" id="he-value" placeholder="Value">
-                    <div id='div' class='inline'>
-                        <input type="button" id="he-push" value="Push">
-                        <input type="button" id="he-remove" value="Remove">
-                        <input type="button" id="he-clear" value="Clear">
+                <div class='inline' id='div'>
+                    <div id='div1'>
+                        <select id="edit-selector">
+                            <option value="1">Array 1</option>
+                            <option value="2">Array 2</option>
+                            <option value="3">Array 3</option>
+                        </select>
+                            <input type="text" id="ed-value" placeholder="Value">
+                    </div>
+                    <div id='div2' class='inline' >
+                        <input type="button" id="ed-push" class='w100' value="Push">
+                        <input type="button" id="ed-remove" class='w100' value="Remove">
+                        <input type="button" id="ed-clear" class='w100' value="Clear">
                     </div>
                 </div class='inline'>
                 <div class='inline'>
-                    <input type="button" id="he-full-sort" value="Full Sort">
-                    <input type="button" id="he-default-sort" value="Default Sort">
-                    <input type="button" id="he-sort-numbers" value="Sort Numbers">
-                    <input type="button" id="he-reverse-sort" value="Reverse Sort">
+                    <input type="button" id="ed-full-sort" class='w100' value="Full Sort">
+                    <input type="button" id="ed-default-sort" class='w100' value="Default Sort">
+                    <input type="button" id="ed-sort-numbers" class='w100' value="Sort Numbers">
+                    <input type="button" id="ed-reverse-sort" class='w100' value="Reverse Sort">
+                    
                 </div class='inline'>
                 <div class='inline'>
-                    <input type="button" id='remove-dup' value="Remove duplicates">
-                    <input type="button" id='concat' value="Concat with">
+                    <input type="button" id='remove-dup' value="Remove duplicates" class='w100'>
+                    <input type="button" id='concat' value="Concat with all" class='w100'>
                 </div>
-                
             </form>
+            <form>
+                <h2 class='title'>Algorithm details (testing pg)</h2>
+                <p>Map: </p>
+            </form>
+            
         </div>
     </main>
     <footer></footer>
