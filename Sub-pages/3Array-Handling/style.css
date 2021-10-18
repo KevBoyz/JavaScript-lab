@@ -65,10 +65,17 @@ header h2 {font-size: 1.95em;}
     text-align: center;
     font-size: 2em;
 }
-.buton {
-    background-color: #19fa775b;
+.green {
+    background-color: #19fa778a;
     color: #ffffffd3;
     text-shadow: 1px 1px 2px #000000;
+    cursor:pointer;
+}
+.red {
+    width: 100%;
+    background-color: #ff060659;
+    color: white;
+    text-shadow: 1px 1px 2px black;
     cursor:pointer;
 }
 #logo-img {
@@ -112,6 +119,26 @@ fieldset {
     padding: 0 10px 10px 5px 0;
     border: 1px solid #524d4d69;
 }
+#info {
+    padding: 5px 5px 9px 5px;
+    margin: 14px 0 0 8.3%;
+    background-color: #0000006b;
+    font-size: 14px;
+    color: #00ad00;
+    border-radius: 5px;
+    padding: 8px 8px 8px 8px;
+    border: 1px solid #524d4d69;
+    font-weight: 600;
+    height: 40%;
+}
+#space {
+    margin-top: 12px
+}
+#info h2 {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
 .array-display p {
     margin: 0;
     padding: 0;
@@ -143,6 +170,10 @@ label {
 }
 .w100 {
     width: 100%;
+    background-color: #19fa778a;
+    color: #ffffffd3;
+    text-shadow: 1px 1px 2px #000000;
+    cursor:pointer;
 }
 #edit-selector {
     height: 21px;

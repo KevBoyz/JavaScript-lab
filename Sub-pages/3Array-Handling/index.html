@@ -40,8 +40,8 @@
                     <div class='array-display' id='ardisp-3'><p>[ ]</p></div>
                 </div>
                 <div id='inline'>
-                    <input type="button" id="presets" value="Load Presets">
-                    <input type="button" id="cl-all" value="Clear all">
+                    <input type="button" id="presets" value="Load Presets" class='green'>
+                    <input type="button" id="cl-all" value="Clear all" class='red'>
                 </div>
             </form>
             <form id='tst-page'>
@@ -52,16 +52,16 @@
                         <option value="2">Array 2</option>
                         <option value="3">Array 3</option>
                     </select>
-                    <input type="button" id="map" value="Map">
-                    <input type="button" id="filter"value="Filter">
-                    <input type="button" id="reduce" value="Reduce">
+                    <input type="button" id="map" value="Map" class='green'>
+                    <input type="button" id="filter"value="Filter" class='green'>
+                    <input type="button" id="reduce" value="Reduce" class='green'>
                 </div>
                 <div class='inline'>
-                    <input type="button" id="pop" value="Pop">
-                    <input type="button" id="shift" value="Shift">
-                    <input type="button" id="unshift" value="Unshift">
-                    <input type="button" id="toString" value="ToString">
-                    <input type="button" id="join" value="Join">
+                    <input type="button" id="pop" value="Pop" class='red'>
+                    <input type="button" id="shift" value="Shift" class='red'>
+                    <input type="button" id="unshift" value="Unshift" class='green'>
+                    <input type="button" id="toString" value="ToString" class='green'>
+                    <input type="button" id="join" value="Join" class='green'>
                 </div>
             </form>
         </div>
@@ -79,8 +79,8 @@
                     </div>
                     <div id='div2' class='inline' >
                         <input type="button" id="ed-push" class='w100' value="Push">
-                        <input type="button" id="ed-remove" class='w100' value="Remove">
-                        <input type="button" id="ed-clear" class='w100' value="Clear">
+                        <input type="button" id="ed-remove" class='red' value="Remove">
+                        <input type="button" id="ed-clear" class='red' value="Clear">
                     </div>
                 </div class='inline'>
                 <div class='inline'>
@@ -95,11 +95,12 @@
                     <input type="button" id='concat' value="Concat with all" class='w100'>
                 </div>
             </form>
-            <form>
+            <form id='info'>
                 <h2 class='title'>Algorithm details (testing pg)</h2>
                 <p>Map: Multiply all numeric values by 2</p>
                 <p>Filter: delete all non :x % 2 != 0: string</p>
-                <p>Reduce: reduce the array in on element suming all elements</p>
+                <p>Reduce: reduce the array in on element suming all elements</p> <br>
+                <p id='space'>[/-Note-\] ~ Some methods don't work in array with specific values</p>
             </form>
             
         </div>
