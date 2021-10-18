@@ -71,13 +71,23 @@ function _reduce() {
 }
 
 let mthSelector = document.getElementById('mth-tester-selector')
-let map = document.getElementById('map')
-let filter = document.getElementById('filter')
-let reduce = document.getElementById('reduce')
+const map = document.getElementById('map')
+const filter = document.getElementById('filter')
+const reduce = document.getElementById('reduce')
+const pop = document.getElementById('pop')
+const shift = document.getElementById('shift')
+const unshift = document.getElementById('unshift')
+const toStr = document.getElementById('toString')
+const join = document.getElementById('join')
+
 filter.addEventListener('click', _filter)
 map.addEventListener('click', _map)
 reduce.addEventListener('click', _reduce)
-
+pop.addEventListener('click', function(){array[mthSelector.value - 1].pop();updateDisplay()})
+shift.addEventListener('click', function(){array[mthSelector.value - 1].shift();updateDisplay()})
+unshift.addEventListener('click', function(){array[mthSelector.value - 1].unshift('value');updateDisplay()})
+toStr.addEventListener('click', function(){window.alert(array[mthSelector.value - 1].toString())})
+join.addEventListener('click', function(){window.alert(array[mthSelector.value - 1].join(' -> '))})
 
 //Edit area
 function _push() {
