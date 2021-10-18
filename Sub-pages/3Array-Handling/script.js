@@ -37,6 +37,46 @@ presets.addEventListener('click', loadPresets)
 clAll.addEventListener('click', clearAll)
 
 //Testing page
+function _map() {
+    array[mthSelector.value - 1] = array[mthSelector.value - 1].map(
+        function(value) {
+            if (typeof(value) == 'number') {
+                console.log(typeof(value))
+                return value * 2
+            } else {
+                return value
+            }
+        }
+    )
+    updateDisplay()
+}
+function _filter() {
+    array[mthSelector.value - 1] = array[mthSelector.value - 1].filter(
+        function(value) {
+            if (typeof(value) == 'string') {
+                if (value.length % 2 == 0) {return value}
+            } else {return value}    
+        }
+    )  
+    updateDisplay()
+}
+function _reduce() {
+    backup = array[mthSelector.value - 1]
+    array[mthSelector.value - 1] = array[mthSelector.value - 1].reduce(
+        function(total, value) {
+            return total += value
+        }
+    )
+    updateDisplay()
+}
+
+let mthSelector = document.getElementById('mth-tester-selector')
+let map = document.getElementById('map')
+let filter = document.getElementById('filter')
+let reduce = document.getElementById('reduce')
+filter.addEventListener('click', _filter)
+map.addEventListener('click', _map)
+reduce.addEventListener('click', _reduce)
 
 
 //Edit area
