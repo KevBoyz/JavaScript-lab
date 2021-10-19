@@ -61,13 +61,32 @@ function _filter() {
     updateDisplay()
 }
 function _reduce() {
-    backup = array[mthSelector.value - 1]
-    array[mthSelector.value - 1] = array[mthSelector.value - 1].reduce(
-        function(total, value) {
-            return total += value
-        }
-    )
+    var reduc = array[mthSelector.value - 1].reduce(function(total, value) {return total += value})
+    _clear() 
+    array[mthSelector.value - 1].push(reduc)
     updateDisplay()
+}
+
+function _every() {
+    if (array[mthSelector.value - 1].every(function(value){return value.length > 3})) {
+        window.alert('All values in this array have 3+ of length')
+    } else {
+        window.alert('Error, some or all elements in this array have x <= 0 of length')
+    }
+}
+function _includes() {
+    if (array[mthSelector.value - 1].includes('Andrew')) {
+        window.alert('This array includes the [Andrew] value')
+    } else {
+        window.alert('Error, [Andrew] value not find on this array')
+    }
+}
+function _find() {
+    if (array[mthSelector.value - 1].find(function(value){return value == 'James'})) {
+        window.alert(`The value James, has finded on array and her index is: ${array[mthSelector.value - 1].findIndex(function(value){return value == 'James'})}`)
+    } else {
+        window.alert('Value [James] not founded')
+    }
 }
 
 let mthSelector = document.getElementById('mth-tester-selector')
@@ -79,6 +98,9 @@ const shift = document.getElementById('shift')
 const unshift = document.getElementById('unshift')
 const toStr = document.getElementById('toString')
 const join = document.getElementById('join')
+const every = document.getElementById('every')
+const includes = document.getElementById('includes')
+const find = document.getElementById('find')
 
 filter.addEventListener('click', _filter)
 map.addEventListener('click', _map)
@@ -88,6 +110,9 @@ shift.addEventListener('click', function(){array[mthSelector.value - 1].shift();
 unshift.addEventListener('click', function(){array[mthSelector.value - 1].unshift('value');updateDisplay()})
 toStr.addEventListener('click', function(){window.alert(array[mthSelector.value - 1].toString())})
 join.addEventListener('click', function(){window.alert(array[mthSelector.value - 1].join(' -> '))})
+every.addEventListener('click', _every)
+includes.addEventListener('click', _includes)
+find.addEventListener('click', _find)
 
 //Edit area
 function _push() {
@@ -107,7 +132,6 @@ function removeDup() {
     array[edSelector.value - 1] = [...new Set(array[edSelector.value - 1])]
     updateDisplay()
 }
-
 function _remove() {
     array[edSelector.value - 1] = array[edSelector.value - 1].filter(
         function(value) {
@@ -117,8 +141,7 @@ function _remove() {
         }
     )
     updateDisplay()
-}
-            
+}          
 function _fullSort() {
     array[edSelector.value - 1] = array[edSelector.value - 1].sort()
     updateDisplay()
@@ -139,7 +162,6 @@ function _concat() {
     updateDisplay()
 }
 
-
 let edSelector = document.getElementById('edit-selector')
 const push = document.getElementById('ed-push')
 const remove = document.getElementById('ed-remove')
@@ -150,6 +172,7 @@ const numbersSort = document.getElementById('ed-sort-numbers')
 const reverseSort = document.getElementById('ed-reverse-sort')
 const removeDuplicates = document.getElementById('remove-dup')
 const concat = document.getElementById('concat')
+
 
 push.addEventListener('click', _push)
 clear.addEventListener('click', _clear)
