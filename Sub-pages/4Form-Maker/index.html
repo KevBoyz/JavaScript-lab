@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/ico" href="../../favicon.ico"/>
+    <title>Remembering JavaScript</title>
+</head>
+<body>
+
+    <header>
+        <p id="description">
+            Some random JavaScript projects developed by <a href="https://github.com/KevBoyz">KevBoyz</a>.
+        </p>
+        <nav>
+            <a href="../../index.html" id="nav-a">
+                <img src="../../favicon.ico" alt="Js logo" id="logo-img">
+                <h1 id="main-title">
+                    JavaScript-Lab 
+                </h1>
+            </a>
+            <h2>Form Maker, do your own.</h2>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <form action="" id='login-pg'>
+                <h2 class='title'>Login Page</h2>
+                <input type="text" name="name" id="name" placeholder="Username">
+                <input type="email" name="email" id="email" placeholder="Email adress">
+                <input type="password" name="password" id="password" placeholder="Password">
+                <input type="button" value="Generate the Object" id="lg-button">
+            </form>
+            <div id="lg-output">
+                <p>User name: <span id='name-op'></span></p>
+                <p>Email adrs: <span id='email-op'></span></p>
+                <p>Password: <span id='password-op'></span></p>
+            </div>
+            <form action="" id='calc-pg'>
+                <h2 class='title'>Math Calculator</h2>
+                <div id=calc-area>
+                    <input type="number" name="number" id="n1" placeholder="Number 1">
+                    <input type="text" name="type-c" id="type-c" placeholder="Methd" list='list'>
+                    <datalist id="list">
+                        <option value="+"></option>
+                        <option value="-"></option>
+                        <option value="*"></option>
+                        <option value="/"></option>
+                      </datalist>
+                    <input type="number" name="number" id="n2" placeholder="Number 2">
+                </div>
+                <input type="button" value="Calcule the result" id='rbutton'>
+                <p id='calc-output'>Result: <span id='calc-r'></span></p>
+            </form>
+            <form action="" id='loop-pg'>
+                <h2 class='title'>Looping the innerHTML</h2>
+                <div>
+                    <input type="number" name="number" id="ls" placeholder="Loop start">
+                    <input type="number" name="number" id="le" placeholder="Loop end">
+                    <input type="number" name="number" id="lj" placeholder="Loop jump">
+                    <input type="button" value="Run loop" id='lp-button'>
+                </div>
+            </form>
+            <p id='loop-output'></p>
+        </div>
+        <div class="content">
+            <form action="" id='array-pg'>
+                <h2 class='title'>Array handling</h2>
+                <div>
+                    <input type="text" name="data" id="data" placeholder='Type something'>
+                    <input type="button" value="Add data" id='dbutton'>
+                </div>
+                <select name="array" id="array-box">
+                    <option value="">Array itens here, open after add one...</option>
+                </select>
+                <input type="button" value="analize array" id='analize'>
+            </form>
+            <div id='output-info'></div>
+            <form action="" id='image-pg'>
+                <h2 id='titleup'>Style swicher</h2>
+                <div id='img-output'></div>
+                <div>
+                    <input type="button" value="back" id="back">
+                    <input type="button" value="next" id="next">
+                </div>
+            </form>
+            <form action="">
+                <h2 class='title'>Event box</h2>
+                <div id='event-box'></div>
+                <div id='event-info'></div>
+            </form>
+        </div>
+    </main>
+    <footer></footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
