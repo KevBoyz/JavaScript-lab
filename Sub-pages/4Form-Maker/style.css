@@ -81,170 +81,31 @@ main {
     max-width: 600px;
     margin-bottom: 10px;
 }
-#login-pg {
-    margin-bottom: 20px;
-}
 .title {
     text-align: center;
     font-size: 2em;
 }
-#login-pg input {
+.inline {
     display: flex;
-    width: 50%;
-    padding: 5px;
-    margin: 0 25% 2px 25%;
-    border-radius: 15px;
-    border: 1px solid black;
+    flex-direction: row;
 }
-#login-pg #lg-button {
-    width: 60%;
-    border: 3px solid rgb(15, 15, 15);
-    padding: 5px;
-    margin: 10px 20% 0 21%;
-    border-radius: 5px;
-    background-color: #19fa776c;
-    color: #fff;
-    font-weight: 500;
-    letter-spacing: 8px;
-    text-shadow: 1px 1px 2px #000000;
-    font-size: 1em;
-    cursor:pointer;
+.inline input[type="button"] {
+    width: 100%;
 }
-#lg-output {
-    width: 80%;
-    margin: 0 10% 0 10%;
-}
-#lg-output span {
-    color: #00ad00;
-}
-#calc-area {
-    width: 60%;
-    margin: 0 20% 2px 20%;
-    display: flex;
-    justify-content:space-around;
-}
-#calc-pg input {
-    width: 40%;
-    text-align: center;
-}
-#calc-pg #type-c {
-    width: 20%;
-}
-#calc-pg #rbutton {
-    width: 60%;
-    margin: 0 20% 2px 20%;
-    background-color: #19fa776c;
+.green {
+    background-color: #19fa778a;
     color: #ffffffd3;
     text-shadow: 1px 1px 2px #000000;
     cursor:pointer;
-    letter-spacing: 10px;
-    font-weight: 500;
-    font-size: 1em;
 }
-#calc-output {
-    width: 60%;
-    margin: 10px 20% 2px 20%;
+.red {
+    width: 100%;
+    background-color: #ff060659;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    cursor:pointer;
 }
-#calc-output span {
-    color: #00ad00;
-}
-#loop-pg h2 {
+form{
     width: 80%;
     margin-left: 10%;
-    margin-right: 10%;
-    text-align: center;
-    font-size: 2em;
-}
-#loop-pg, #loop-output {
-    width: 80%;
-    margin: 10px 10% 2px 10%;
-}
-#ls, #le, #lj, #lp-button{
-    width: 20%;
-}
-#lp-button {
-    cursor: pointer;
-}
-#loop-pg div {
-    margin-left: 10%;
-}
-#array-pg div{
-    width: 50%;
-    margin: 0 25% 10px 25%;
-}
-#array-pg #array-box{
-    width: 47%;
-    margin: 0 25% 10px 25%;
-    cursor: pointer;
-}
-#array-pg #dbutton {
-    width: 32%;
-    cursor: pointer;
-}
-#analize {
-    width: 47%;
-    margin: 0 25% 10px 25%;
-    cursor: pointer;
-    background-color: #19fa776c;
-    color: #ffffffd3;
-    text-shadow: 1px 1px 2px #000000;
-    font-weight: 500;
-    letter-spacing: 5px
-}
-#output-info {
-    max-width: 47%;
-    min-width: 45%;
-    padding: 5px;
-    margin: 0 25% 10px 24%;
-    background-color: #0000006b;
-    font-size: 14px;
-    color: #00ad00;
-}
-#output-info p {
-    margin: 0;
-    padding: 0;
-}
-#image-pg div{
-    width: 50%;
-    margin: 15px 25% 0 25%;
-    display: flex;
-}
-#image-pg input {
-    width: 50%;
-    margin: 0 5px 0 5px
-}
-#img-output {
-    background-color: #19fa7798;
-    height: 10px;
-    border-radius: 20px;
-}
-#titleup {
-    text-align: center;
-    font-size: 2em;
-    margin: 30px 0 0 0 ;
-}
-#event-box {
-    width: 60%;
-    padding-bottom: 80px;
-    margin: 0 0 0 20%;
-    background-color: #19fa7798;
-    border-radius: 10px;
-}
-#event-info {
-    max-width: 64%;
-    min-width: 64%;
-    max-height: 150px;
-    padding: 5px;
-    margin: 10px 0 0px 17%;
-    background-color: #0000006b;
-    font-size: 14px;
-    color: #00ad00;
-    overflow-y: scroll;
-    border-radius: 5px;
-    padding: 0 10px 10px 5px 0;
-    border: 1px solid #524d4d69;
-}
-#event-info p {
-    margin: 0;
-    padding: 0;
 }
