@@ -80,6 +80,7 @@ main {
     min-width: 590px;
     max-width: 600px;
     margin-bottom: 10px;
+    overflow: scroll;
 }
 .title {
     text-align: center;
@@ -98,6 +99,9 @@ main {
     text-shadow: 1px 1px 2px #000000;
     cursor:pointer;
 }
+.green:hover{
+    background-color: #15db688a;
+}
 .red {
     width: 100%;
     background-color: #ff060659;
@@ -105,7 +109,26 @@ main {
     text-shadow: 1px 1px 2px black;
     cursor:pointer;
 }
+.red:hover{
+    background-color: #e0040459;
+}
 form{
     width: 80%;
-    margin-left: 10%;
+    margin: 0 10% 0 10%;
+}
+.blank{
+    margin: 0;
+}
+main:nth-child(0){
+    background-color: blue;
+}
+.radio-div{
+    margin: 5px 0 10px 0;
+}
+input[type="radio"] {
+    margin: -1px 5px 0 0;
+    vertical-align: middle;
+  }
+label{
+    margin-top: -1px;
 }

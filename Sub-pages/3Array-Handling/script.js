@@ -173,7 +173,6 @@ const reverseSort = document.getElementById('ed-reverse-sort')
 const removeDuplicates = document.getElementById('remove-dup')
 const concat = document.getElementById('concat')
 
-
 push.addEventListener('click', _push)
 clear.addEventListener('click', _clear)
 remove.addEventListener('click', _remove)

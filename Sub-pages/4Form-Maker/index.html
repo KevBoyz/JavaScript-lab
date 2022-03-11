@@ -9,7 +9,6 @@
     <title>Formulary Maker</title>
 </head>
 <body>
-
     <header>
         <p id="description">
             Some random JavaScript projects developed by <a href="https://github.com/KevBoyz">KevBoyz</a>.
@@ -33,15 +32,22 @@
             <form id="panel">
                 <h2 class='title'>Creation Panel</h2>
                 <div class="inline">
-                    <input type="button" class="green" value="Add main title" id="addMain">
+                    <input type="button" class="green" value="Add title" id="addTitle">
                     <input type="button" class="green" value="Add paragraph" id="addPh">
                 </div>
+                <div class="blank" id="title-input"></div>
+                <div class="blank" id="paragraph-input"></div>
+                <div class="inline">
+                    <input type="button" value="Add Multi-Chose" class="green" id="addMch">
+                    <input type="button" value="Add text area" class="green">
+                </div>
+                <div class="blank" id="multi-input"></div>
+                <div class="blank" id="textArea-input"></div>
                 <div class="inline">
                     <input type="button" class="red" value="Clear all" id="clear">
                 </div>
             </form>
         </div>
-
     </main>
     <footer></footer>
     <script src="script.js"></script>
