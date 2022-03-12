@@ -11,48 +11,25 @@ function addPha(){
 }
 function addMchoose(){
     var multichoseBox = document.createElement('div')
-    let lineBreak = document.createElement('br');
     multichoseBox.className = 'radio-div'
-    let item1 = document.createElement('input')
-    item1.type = 'radio'
-    item1.name = 'a'
-    let label1 = document.createElement('label')
-    label1.textContent = 'a) Lorem ipsum dolor sit amet consectetur adipisicing elit'
-    
-    multichoseBox.appendChild(item1)
-    multichoseBox.appendChild(label1)
-    multichoseBox.appendChild(lineBreak)
-
-    lineBreak = document.createElement('br');
-    let item2 = document.createElement('input')
-    item2.type = 'radio'
-    item2.name = 'a'
-    let label2 = document.createElement('label')
-    label2.textContent = 'b) Lorem ipsum dolor sit amet consectetur adipisicing elite'
-    multichoseBox.appendChild(item2)
-    multichoseBox.appendChild(label2)
-    multichoseBox.appendChild(lineBreak)
-
-    lineBreak = document.createElement('br');
-    let item3 = document.createElement('input')
-    item3.type = 'radio'
-    item3.name = 'a'
-    let label3 = document.createElement('label')
-    label3.textContent = 'c) Lorem ipsum dolor sit amet consectotur adipisicing elit'
-    multichoseBox.appendChild(item3)
-    multichoseBox.appendChild(label3)
-    multichoseBox.appendChild(lineBreak)
-
-    lineBreak = document.createElement('br');
-    let item4 = document.createElement('input')
-    item4.type = 'radio'
-    item4.name = 'a'
-    let label4 = document.createElement('label')
-    label4.textContent = 'd) Lorem ipsum dolore sit amet consectetur adipisicing elit'
-    multichoseBox.appendChild(item4)
-    multichoseBox.appendChild(label4)
-    multichoseBox.appendChild(lineBreak)
-
+    let lineBreak = null
+    let item = null
+    let label = null
+    let name = String(Math.trunc(Math.random() * 10000))
+    for (let i = 1;i <= 4;i++){
+        lineBreak = document.createElement('br')
+        item = document.createElement('input')
+        item.type = 'radio'
+        item.name = name
+        label = document.createElement('label')
+        if (i == 1) {label.textContent = 'a) Lorem ipsum dolor sit amet consectetur adipisicing elit'}
+        else if (i == 2) {label.textContent = 'b) Lourem ipsum dolor sit amet consectetur adipisicing elit'}
+        else if (i == 3) {label.textContent = 'c) Lorem ipsum dalor sit amet consectetur adipisicing elit'}
+        else if (i == 4) {label.textContent = 'd) Lorem ipsum dalor sit amet consectetur adipisicined elit'}
+        multichoseBox.appendChild(item)
+        multichoseBox.appendChild(label)
+        multichoseBox.appendChild(lineBreak)
+    }
     formSection.appendChild(multichoseBox)
 }
 function clearAll(){
