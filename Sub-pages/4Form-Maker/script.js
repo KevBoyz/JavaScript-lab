@@ -1,8 +1,35 @@
+function openTitleInput(){
+    let titleInput = document.getElementById('title-input')
+    if (titleInput.childElementCount >= 1){
+        return
+    }
+    let blankDiv = document.createElement('div')
+    blankDiv.className = 'blank-div'
+    let titleInputText = document.createElement('input')
+    titleInputText.type = 'text'
+    titleInputText.id = 'titleInputText'
+    titleInputText.placeholder = 'Title text'
+    blankDiv.appendChild(titleInputText)
+    let submitButton = document.createElement('input')
+    submitButton.type = 'button'
+    submitButton.value = 'Submit Title'
+    submitButton.className = 'blue'
+    submitButton.id = 'submitButton'
+    blankDiv.appendChild(submitButton)
+    titleInput.appendChild(blankDiv)
+    // Get html elements
+    submitButton = document.getElementById('submitButton')
+    submitButton.addEventListener('click', addaTitle)
+}
 function addaTitle(){
+    let titleInputText = document.getElementById('titleInputText')
+    let txt = titleInputText.value
     var title = document.createElement('h1')
     title.className = 'title'
-    title.textContent = 'The Super Tuper Formulary!'
+    title.textContent = txt
     formSection.appendChild(title)
+    let titleInput = document.getElementById('title-input')
+    titleInput.removeChild(titleInput.lastChild)
 }
 function addPha(){
     var paragraph = document.createElement('p')
@@ -42,14 +69,19 @@ function remove_last_child() {
     select.removeChild(select.lastChild);
 }
 
-let formSection = document.getElementById('form-section') 
+var formSection = document.getElementById('form-section') 
 
+//buttons
 let addTitle = document.getElementById('addTitle')
 let addPh = document.getElementById('addPh')
 let addMch = document.getElementById('addMch')
 let clear = document.getElementById('clear')
 
-addTitle.addEventListener('click', addaTitle)
+//input divs
+
+let paragraphInput = document.getElementById('paragraph-input')
+
+addTitle.addEventListener('click', openTitleInput)
 clear.addEventListener('click', clearAll)
 addPh.addEventListener('click', addPha)
 addMch.addEventListener('click', addMchoose)
