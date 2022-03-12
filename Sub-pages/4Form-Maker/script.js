@@ -10,16 +10,39 @@ function openTitleInput(){
     titleInputText.id = 'titleInputText'
     titleInputText.placeholder = 'Title text'
     blankDiv.appendChild(titleInputText)
-    let submitButton = document.createElement('input')
-    submitButton.type = 'button'
-    submitButton.value = 'Submit Title'
-    submitButton.className = 'blue'
-    submitButton.id = 'submitButton'
-    blankDiv.appendChild(submitButton)
+    let titleSubmitButton = document.createElement('input')
+    titleSubmitButton.type = 'button'
+    titleSubmitButton.value = 'Submit Title'
+    titleSubmitButton.className = 'blue'
+    titleSubmitButton.id = 'titleSubmitButton'
+    blankDiv.appendChild(titleSubmitButton)
     titleInput.appendChild(blankDiv)
     // Get html elements
-    submitButton = document.getElementById('submitButton')
-    submitButton.addEventListener('click', addaTitle)
+    titleSubmitButton = document.getElementById('titleSubmitButton')
+    titleSubmitButton.addEventListener('click', addaTitle)
+}
+function openParagrphInput(){
+    let paragraphInput = document.getElementById('paragraph-input')
+    if (paragraphInput.childElementCount >= 1){
+        return
+    }
+    let blankDiv = document.createElement('div')
+    blankDiv.className = 'blank-div'
+    let paragraphInputText = document.createElement('input')
+    paragraphInputText.type = 'text'
+    paragraphInputText.id = 'paragraphInputText'
+    paragraphInputText.placeholder = 'Paragraph text'
+    blankDiv.appendChild(paragraphInputText)
+    let paragraphSubmitButton = document.createElement('input')
+    paragraphSubmitButton.type = 'button'
+    paragraphSubmitButton.value = 'Submit Paragraph'
+    paragraphSubmitButton.className = 'blue'
+    paragraphSubmitButton.id = 'paragraphSubmitButton'
+    blankDiv.appendChild(paragraphSubmitButton)
+    paragraphInput.appendChild(blankDiv)
+    // Get html elements
+    paragraphSubmitButton = document.getElementById('paragraphSubmitButton')
+    paragraphSubmitButton.addEventListener('click', addPha)
 }
 function addaTitle(){
     let titleInputText = document.getElementById('titleInputText')
@@ -32,9 +55,16 @@ function addaTitle(){
     titleInput.removeChild(titleInput.lastChild)
 }
 function addPha(){
+    let paragraphInput = document.getElementById('paragraph-input')
+    let paragraphInputText = document.getElementById('paragraphInputText')
+    let txt = paragraphInputText.value
+    if (txt == 'lorem'){
+        txt = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae veritatis quo dicta officiis exercitationem blanditiis. Explicabo illum quod, dolorem minima sed, obcaecati blanditiis voluptatibus ad delectus provident earum iure odio.'
+    }
     var paragraph = document.createElement('p')
-    paragraph.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa reprehenderit consectetur dolorum veritatis. Molestias repellat ratione expedita commodi dolor, ipsa unde, enim nihil debitis eveniet odit ut soluta ipsum cum!'
+    paragraph.textContent = txt
     formSection.appendChild(paragraph)
+    paragraphInput.removeChild(paragraphInput.lastChild)
 }
 function addMchoose(){
     var multichoseBox = document.createElement('div')
@@ -77,11 +107,8 @@ let addPh = document.getElementById('addPh')
 let addMch = document.getElementById('addMch')
 let clear = document.getElementById('clear')
 
-//input divs
-
-let paragraphInput = document.getElementById('paragraph-input')
-
 addTitle.addEventListener('click', openTitleInput)
-clear.addEventListener('click', clearAll)
-addPh.addEventListener('click', addPha)
+addPh.addEventListener('click', openParagrphInput)
 addMch.addEventListener('click', addMchoose)
+clear.addEventListener('click', clearAll)
+
