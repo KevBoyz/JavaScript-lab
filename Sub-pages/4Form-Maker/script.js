@@ -44,6 +44,15 @@ function openParagrphInput(){
     paragraphSubmitButton = document.getElementById('paragraphSubmitButton')
     paragraphSubmitButton.addEventListener('click', addPha)
 }
+function openMultiChooseInput(){
+    let multiInput = document.getElementById('multi-input')
+    if (multiInput.childElementCount >= 1){
+        return
+    }
+    let blankDiv = document.createElement('div')
+    blankDiv.className = 'blank-div'
+    
+}
 function addaTitle(){
     let titleInputText = document.getElementById('titleInputText')
     let txt = titleInputText.value
@@ -101,7 +110,6 @@ function remove_last_child() {
 
 var formSection = document.getElementById('form-section') 
 
-//buttons
 let addTitle = document.getElementById('addTitle')
 let addPh = document.getElementById('addPh')
 let addMch = document.getElementById('addMch')
@@ -109,6 +117,5 @@ let clear = document.getElementById('clear')
 
 addTitle.addEventListener('click', openTitleInput)
 addPh.addEventListener('click', openParagrphInput)
-addMch.addEventListener('click', addMchoose)
+addMch.addEventListener('click', openMultiChooseInput)
 clear.addEventListener('click', clearAll)
-
